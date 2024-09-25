@@ -1,19 +1,16 @@
-import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import React from "react";
 
 const inter = Inter({subsets: ["latin"]});
-
-export const metadata: Metadata = {
-  title: "CodeMary",
-};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={`${inter.className} bg-zinc-900 text-white p-10`}>
@@ -25,6 +22,9 @@ export default function RootLayout({
             </Link>
             <Link href="/about" className="hover:underline">
               Sobre
+            </Link>
+            <Link href="/contact" className="hover:underline">
+              Contato
             </Link>
           </nav>
         </header>
